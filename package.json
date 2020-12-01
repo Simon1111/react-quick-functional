@@ -1,0 +1,22 @@
+{
+  "name": "react-quick-functional",
+  "version": "1.0.0",
+  "description": "Somethink for show",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simon1111/react-quick-functional.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Simon Lazarev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simon1111/react-quick-functional/issues"
+  },
+  "homepage": "https://github.com/Simon1111/react-quick-functional#readme"
+}
