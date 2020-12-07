@@ -1,19 +1,19 @@
 import { Fragment } from 'react';
-import './style/App.css';
+import '../style/App.css';
 import { Link, Switch, Route, Redirect } from 'react-router-dom';
-import routesList from './routes.js';
+import routesList from '../routes.js';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <nav>
-          {routesList.map((page, index) => {
+          {routesList.map(page => {
             return (
               <Fragment>
                 { page.showMain && 
                   <Link 
-                    key={index} 
+                    key={`header-nav-link-${page.uid}`} 
                     to={page.path}
                     className="link"
                   >
@@ -26,10 +26,10 @@ function App() {
         </nav>
       </header>
       <Switch>
-        {routesList.map((page, index) => {
+        {routesList.map(page => {
           return (
             <Route
-              key={index}
+              key={`route-link-${page.uid}`}
               path={page.path}
               exact 
               component={page.component}
