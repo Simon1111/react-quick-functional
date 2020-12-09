@@ -25,12 +25,14 @@ const Blog = () => {
       <h1>Blog</h1>
       {linksPosts && linksPosts.length && (
         <Fragment>
-          {/* TODO need fix error key={uid} && finish this blog page */}
-          <nav>
+          {/* TODO finish this blog page */}
+          <nav className="blog-links">
             {linksPosts.map(page => {
               return (
                 <Link
+                  key={`link-post-${page.id}`}
                   to={`/post/${page.id}`}
+                  className="blog-link"
                   dangerouslySetInnerHTML={{__html: page.title}} 
                 />
               );
@@ -40,7 +42,7 @@ const Blog = () => {
             {linksPosts.map(page => {
               return (
                 <Route
-                  key={`link-post-${page.id}`}
+                  key={`link-route-${page.id}`}
                   path={`/post/${page.id}`}
                   render={() => <Card page={page} />}
                 />

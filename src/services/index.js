@@ -1,10 +1,5 @@
-import axios from 'axios';
 
-const config = {
-  baseURL: process.env.REACT_APP_API_URL
-};
-
-export const ApiService = axios.create(config);
+import ApiService from './apiService'
 
 /* GET PAGES */
 

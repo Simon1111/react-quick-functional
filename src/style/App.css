@@ -13,3 +13,28 @@
   color: #61dafb;
   padding: 0 5px;
 }
+
+.container{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.blog-links{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-link{
+  line-height: 2;
+  font-size: 16px;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.blog-link::first-letter {  
+  text-transform: uppercase;
+}
+
+.blog-link:hover{
+  text-decoration: underline;
+}

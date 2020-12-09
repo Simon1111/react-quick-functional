@@ -10,10 +10,9 @@ const App = () => {
         <nav>
           {routesList.map(page => {
             return (
-              <Fragment>
+              <Fragment key={`header-nav-link-${page.uid}`}>
                 { page.showMain && 
                   <Link 
-                    key={`header-nav-link-${page.uid}`} 
                     to={page.path}
                     className="link"
                   >
@@ -25,19 +24,21 @@ const App = () => {
           })}
         </nav>
       </header>
-      <Switch>
-        {routesList.map(page => {
-          return (
-            <Route
-              key={`route-link-${page.uid}`}
-              path={page.path}
-              exact 
-              component={page.component}
-            />
-          ) 
-        })}
-        <Redirect to="/404" />
-      </Switch>
+      <main className="container">
+        <Switch>
+          {routesList.map(page => {
+            return (
+              <Route
+                key={`route-link-${page.uid}`}
+                path={page.path}
+                exact 
+                component={page.component}
+              />
+            ) 
+          })}
+          <Redirect to="/404" />
+        </Switch>
+      </main>
     </div>
   );
 }
