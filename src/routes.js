@@ -22,14 +22,6 @@ export default [
     component: About
   },
   {
-    uid: "route-3",
-    path: "/404",
-    showMain: false,
-    exact: true,
-    name: "Error",
-    component: Error
-  },
-  {
     uid: "route-4",
     path: "/blog",
     showMain: true,
@@ -44,5 +36,13 @@ export default [
     exact: false,
     name: "Card",
     component: Card
+  },
+  {
+    uid: "route-error",
+    path: "**",
+    showMain: false,
+    exact: false,
+    name: "Error",
+    component: Error
   }
 ];

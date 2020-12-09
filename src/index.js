@@ -6,12 +6,12 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import './style/Index.css';
 import reportWebVitals from './reportWebVitals';
-import store from './store.js'
+import store from './store'
 
 
 render(
+  // TODO add ssr ~tommorow
   <React.StrictMode>
-    {/* DOTO add Store tomorov */}
     <Provider store={store}>
       <Router>
         <App />

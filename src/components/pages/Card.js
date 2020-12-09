@@ -21,6 +21,7 @@ const Card = () => {
   
 
   return (
+    // TODO add 404 for this page
     <article>
       <h1>{title}</h1>
       <p>{text}</p>
