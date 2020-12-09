@@ -1,4 +1,4 @@
-import { FETCH_POSTS_LOAD, FETCH_POSTS_RESOLVE, FETCH_POSTS_REJECT } from '../types';
+import { FETCH_POSTS_LOAD, FETCH_POSTS_RESOLVE, FETCH_POSTS_REJECT } from '@/redux/types';
 
 export const postsReducer = (state, action) => {
   switch (action.type) {

@@ -3,11 +3,7 @@ import ApiService from './apiService'
 
 /* GET PAGES */
 
-export const getBlogPages = async () => {
-  // TODO need add pagination
-  // let _countrer = 1; // ?_page=1
-  const url = `/posts`;
-
+const _connectData = async (url) => {
   try {
     const response = await ApiService.get(url);
     return response.data;
@@ -17,4 +13,18 @@ export const getBlogPages = async () => {
     console.log(data);
     throw error;
   }
+}
+
+export const getBlogPages = async () => {
+  // TODO need add pagination
+  let _countrer = 1; // ?_page=1
+  const url = `/posts?_page=${_countrer}`;
+
+  return await _connectData(url);
+};
+
+export const getBlogPage = async (slug) => {
+  const url = `/posts/${slug}`;
+
+  return await _connectData(url);
 };
