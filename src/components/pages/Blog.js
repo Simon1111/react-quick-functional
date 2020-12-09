@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchPosts } from '../../redux/actions';
+
+import { fetchPosts } from '@/redux/actions';
 import Card from './Card';
 
 import {
@@ -44,7 +45,8 @@ const Blog = () => {
                 <Route
                   key={`link-route-${page.id}`}
                   path={`/post/${page.id}`}
-                  render={() => <Card page={page} />}
+                  component={Card}
+                  // render={() => <Card page={page} />}
                 />
               )
             })}

@@ -1,7 +1,8 @@
 import { Fragment } from 'react';
-import '../style/App.css';
 import { Link, Switch, Route, Redirect } from 'react-router-dom';
-import routesList from '../routes.js';
+
+import routesList from '@/routes.js';
+import '@/style/App.css';
 
 const App = () => {
   return (
