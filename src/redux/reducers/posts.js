@@ -9,7 +9,6 @@ export const postsReducer = (state, action) => {
       };
       
     case FETCH_POSTS_RESOLVE:
-      console.log(action.payload);
       return {
         error: null,
         payload: action.payload || [],
